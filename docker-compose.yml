@@ -92,7 +92,7 @@ services:
 
   # Aztec Explorer - Indexer that syncs Aztec L2 blocks and transactions
   aztecexplorer-indexer:
-    image: bdehri/aztecexplorer-indexer:3.0.0-devnet.20251212
+    image: bdehri/aztecexplorer-indexer:5.0.0-rc.2-0.0.1
     container_name: aztecexplorer-indexer
     depends_on:
       aztecexplorer-mongo:
@@ -108,7 +108,7 @@ services:
 
   # Aztec Explorer - REST API for querying indexed data
   aztecexplorer-api:
-    image: bdehri/aztecexplorer-indexer-api:3.0.0-devnet.20251212
+    image: bdehri/aztecexplorer-indexer-api:1.0.1
     container_name: aztecexplorer-api
     depends_on:
       - aztecexplorer-mongo
